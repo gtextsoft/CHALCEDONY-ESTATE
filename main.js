@@ -13,15 +13,8 @@ btn.addEventListener('click', () => {
 });
 
 // Countdown Timer Logic
-// Set the date we're counting down to (Nov 7th of current/next year)
-const now = new Date();
-let targetYear = now.getFullYear();
-// If current date is past Nov 7, set target to next year
-if (now.getMonth() > 10 || (now.getMonth() === 10 && now.getDate() > 7)) {
-    targetYear += 1;
-}
-// Note: Month is 0-indexed (10 = November)
-const countDownDate = new Date(targetYear, 10, 7, 23, 59, 59).getTime();
+// Set the date we're counting down to (Dec 5th, 2025)
+const countDownDate = new Date(2025, 11, 5, 23, 59, 59).getTime();
 
 const timerInterval = setInterval(function () {
     const now = new Date().getTime();
